@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
@@ -13,7 +13,7 @@ import SocialProofOne from '@/components/sections/socialProof/SocialProofOne';
 import FaqSplitText from '@/components/sections/faq/FaqSplitText';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis';
-import { Award, Calculator, Car, CheckCircle, CreditCard, DollarSign, Handshake, Heart, MessageSquare, Phone, RefreshCw, Search, Shield, Sparkles, Star, TrendingUp, Users } from "lucide-react";
+import { Award, Calculator, Car, CheckCircle, CreditCard, DollarSign, Handshake, Heart, MessageSquare, Phone, RefreshCw, Search, Shield, Sparkles, Star, TrendingUp, Users, Zap } from "lucide-react";
 
 const assetMap: { id: string; url: string; alt?: string }[] = [
   {"id":"hero-cars","url":"https://images.pexels.com/photos/18108314/pexels-photo-18108314.jpeg?auto=compress&cs=tinysrgb&h=650&w=940","alt":"Sleek luxury cars showcased in a stylish, modern automotive dealership."},
@@ -67,9 +67,9 @@ export default function Home() {
 
   return (
     <ThemeProvider
-      defaultButtonVariant="icon-arrow"
-      defaultTextAnimation="entrance-slide"
-      borderRadius="soft"
+      defaultButtonVariant="hover-magnetic"
+      defaultTextAnimation="background-highlight"
+      borderRadius="rounded"
     >
       <div id="nav" data-section="nav">
         <NavbarLayoutFloatingInline
@@ -79,9 +79,9 @@ export default function Home() {
             { name: "Features", id: "feature" },
             { name: "Contact", id: "contact" }
           ]}
-          brandName="AutoElite"
+          brandName="AutoElite Motors"
           button={{
-            text: "View Cars",
+            text: "Shop Now",
             href: "product"
           }}
         />
@@ -89,13 +89,13 @@ export default function Home() {
 
       <div id="hero" data-section="hero">
         <HeroSplit
-          title="Find Your Perfect Car"
-          description="Discover premium vehicles from trusted dealers. Quality guaranteed, financing available, and exceptional service every step of the way."
-          tag="Premium Selection"
+          title="Premium Luxury Cars"
+          description="Discover exceptional vehicles from the world's most prestigious brands. Each car is carefully selected and thoroughly inspected to meet our premium standards."
+          tag="Luxury Collection"
           tagIcon={Star}
           buttons={[
-            { text: "Browse Inventory", href: "product" },
-            { text: "Learn More", href: "about" }
+            { text: "Explore Inventory", href: "product" },
+            { text: "Schedule Visit", href: "contact" }
           ]}
           imageSrc={heroImage.url}
           imageAlt={heroImage.alt}
@@ -105,24 +105,24 @@ export default function Home() {
 
       <div id="about" data-section="about">
         <SplitAbout
-          title="Why Choose AutoElite"
-          description="We're dedicated to helping you find the perfect vehicle that matches your lifestyle and budget."
-          tag="About Us"
+          title="Excellence in Automotive Retail"
+          description="With decades of experience, we're committed to providing an exceptional car buying experience that exceeds expectations at every touchpoint."
+          tag="Our Commitment"
           tagIcon={Shield}
           bulletPoints={[
             {
-              title: "Quality Guaranteed",
-              description: "Every vehicle undergoes thorough inspection and comes with detailed history reports",
+              title: "Certified Quality",
+              description: "Every vehicle undergoes rigorous multi-point inspection and comes with comprehensive history documentation",
               icon: CheckCircle
             },
             {
-              title: "Competitive Pricing",
-              description: "Fair market prices with transparent pricing and no hidden fees",
+              title: "Fair Pricing",
+              description: "Transparent market-based pricing with no hidden fees and competitive trade-in valuations",
               icon: DollarSign
             },
             {
-              title: "Expert Service",
-              description: "Professional team with years of experience in automotive sales",
+              title: "Expert Team",
+              description: "Knowledgeable professionals with extensive automotive expertise and commitment to service excellence",
               icon: Users
             }
           ]}
@@ -130,36 +130,36 @@ export default function Home() {
           imageAlt={aboutImage.alt}
           imagePosition="left"
           buttons={[
-            { text: "View Inventory", href: "product" }
+            { text: "View Collection", href: "product" }
           ]}
         />
       </div>
 
       <div id="feature" data-section="feature">
         <FeatureCardTwo
-          title="Complete Car Buying Experience"
-          description="Everything you need to make your car purchase smooth and worry-free"
-          tag="Services"
-          tagIcon={Sparkles}
+          title="Premium Car Buying Services"
+          description="Comprehensive solutions designed to make your luxury car purchase seamless and worry-free"
+          tag="Premium Services"
+          tagIcon={Zap}
           features={[
             {
-              title: "Flexible Financing",
-              description: "Multiple financing options with competitive rates and flexible terms to fit your budget",
+              title: "Luxury Financing",
+              description: "Exclusive financing programs with premium rates and terms tailored for luxury vehicle purchases",
               icon: CreditCard
             },
             {
-              title: "Professional Inspection",
-              description: "Comprehensive multi-point inspection ensures quality and reliability of every vehicle",
+              title: "Premium Inspection",
+              description: "Comprehensive 150-point inspection covering all mechanical, electrical, and cosmetic aspects",
               icon: Search
             },
             {
-              title: "Extended Warranty",
-              description: "Optional extended warranty plans to protect your investment and provide peace of mind",
+              title: "Extended Protection",
+              description: "Comprehensive warranty programs and protection plans designed for luxury vehicle ownership",
               icon: Shield
             },
             {
-              title: "Trade-In Service",
-              description: "Get competitive value for your current vehicle with our hassle-free trade-in process",
+              title: "Trade Evaluation",
+              description: "Professional appraisal service with market-leading valuations for your current vehicle",
               icon: RefreshCw
             }
           ]}
@@ -168,78 +168,78 @@ export default function Home() {
 
       <div id="product" data-section="product">
         <ProductCardOne
-          title="Featured Vehicles"
-          description="Explore our handpicked selection of premium vehicles"
-          tag="Inventory"
+          title="Curated Luxury Collection"
+          description="Hand-selected premium vehicles representing the finest in automotive engineering and design"
+          tag="Exclusive Inventory"
           tagIcon={Car}
           products={[
             {
               id: "1",
-              name: "Luxury Sedan Elite",
-              price: "$45,900",
+              name: "Executive Sedan Collection",
+              price: "$89,900",
               imageSrc: carSedanImage.url,
               imageAlt: carSedanImage.alt
             },
             {
               id: "2",
-              name: "Family SUV Premium",
-              price: "$52,700",
+              name: "Luxury SUV Portfolio",
+              price: "$124,700",
               imageSrc: carSuvImage.url,
               imageAlt: carSuvImage.alt
             },
             {
               id: "3",
-              name: "Sports Convertible",
-              price: "$68,500",
+              name: "Performance Sports Collection",
+              price: "$189,500",
               imageSrc: carSportsImage.url,
               imageAlt: carSportsImage.alt
             }
           ]}
           buttons={[
-            { text: "View All Cars", href: "#inventory" }
+            { text: "Browse Collection", href: "#inventory" }
           ]}
         />
       </div>
 
       <div id="pricing" data-section="pricing">
         <PricingCardTwo
-          title="Financing Options"
-          description="Choose the financing plan that works best for you"
-          tag="Financing"
+          title="Premium Financing Solutions"
+          description="Exclusive financing options crafted for discerning luxury vehicle buyers"
+          tag="Luxury Financing"
           tagIcon={Calculator}
           plans={[
             {
-              id: "standard",
-              badge: "Most Popular",
+              id: "premium",
+              badge: "Executive Choice",
               badgeIcon: Sparkles,
-              price: "3.9% APR",
-              subtitle: "Standard financing with competitive rates",
+              price: "2.9% APR",
+              subtitle: "Premium financing for luxury vehicle acquisitions",
               features: [
-                "Up to 72 months financing",
+                "Up to 84 months luxury financing",
                 "No prepayment penalties",
-                "Quick approval process",
-                "Flexible down payment"
+                "Expedited approval process",
+                "Flexible payment structures"
               ],
               buttons: [
                 { text: "Apply Now", href: "#financing" },
-                { text: "Learn More", href: "#financing-info" }
+                { text: "Learn More", href: "#financing-details" }
               ]
             },
             {
-              id: "premium",
-              badge: "Best Value",
+              id: "elite",
+              badge: "Elite Program",
               badgeIcon: Award,
-              price: "2.9% APR",
-              subtitle: "Premium financing for qualified buyers",
+              price: "1.9% APR",
+              subtitle: "Exclusive program for qualified luxury buyers",
               features: [
-                "Up to 84 months financing",
-                "Lowest available rates",
-                "Priority processing",
-                "Extended warranty included"
+                "Up to 96 months elite financing",
+                "Lowest available premium rates",
+                "VIP processing priority",
+                "Complimentary extended warranty"
               ],
               buttons: [
-                { text: "Get Qualified", href: "#premium-financing" },
-                { text: "Contact Us", href: "contact" }
+                { text: "Get Qualified", href: "#elite-program" },
+                { text: "Speak with Advisor", href: "contact" }
               ]
             }
           ]}
@@ -248,30 +248,30 @@ export default function Home() {
 
       <div id="metric" data-section="metric">
         <MetricCardOne
-          title="Our Track Record"
-          description="Numbers that showcase our commitment to excellence"
-          tag="Results"
+          title="Excellence in Numbers"
+          description="Metrics that demonstrate our commitment to luxury automotive excellence"
+          tag="Performance"
           tagIcon={TrendingUp}
           metrics={[
             {
               id: "1",
-              value: "2,500+",
-              title: "Cars Sold",
-              description: "Happy customers driving away with their dream cars",
+              value: "5,200+",
+              title: "Luxury Sales",
+              description: "Premium vehicles delivered to discerning clients worldwide",
               icon: Car
             },
             {
               id: "2",
-              value: "98%",
-              title: "Satisfaction",
-              description: "Customer satisfaction rating based on reviews",
+              value: "99.8%",
+              title: "Client Satisfaction",
+              description: "Exceptional satisfaction rating from luxury vehicle buyers",
               icon: Heart
             },
             {
               id: "3",
-              value: "15+",
-              title: "Years Experience",
-              description: "Serving the community with automotive expertise",
+              value: "25+",
+              title: "Years Excellence",
+              description: "Decades of expertise in luxury automotive retail",
               icon: Award
             }
           ]}
@@ -280,43 +280,43 @@ export default function Home() {
 
       <div id="testimonial" data-section="testimonial">
         <TestimonialCardOne
-          title="What Our Customers Say"
-          description="Real experiences from satisfied customers"
-          tag="Reviews"
+          title="Client Testimonials"
+          description="Authentic experiences from our valued luxury vehicle clients"
+          tag="Client Stories"
           tagIcon={MessageSquare}
           testimonials={[
             {
               id: "1",
-              name: "Sarah Johnson",
-              role: "Marketing Director",
-              company: "TechCorp Solutions",
+              name: "Sarah Mitchell",
+              role: "Executive Director",
+              company: "Premium Consulting Group",
               rating: 5,
               imageSrc: testimonial1Image.url,
               imageAlt: testimonial1Image.alt
             },
             {
               id: "2",
-              name: "Michael Chen",
-              role: "Business Owner",
-              company: "Chen Consulting",
+              name: "Michael Thompson",
+              role: "Investment Partner",
+              company: "Elite Capital Partners",
               rating: 5,
               imageSrc: testimonial2Image.url,
               imageAlt: testimonial2Image.alt
             },
             {
               id: "3",
-              name: "Emily Rodriguez",
-              role: "Project Manager",
-              company: "InnovateFlow",
+              name: "Victoria Harrison",
+              role: "Managing Director",
+              company: "Prestige Enterprises",
               rating: 5,
               imageSrc: testimonial3Image.url,
               imageAlt: testimonial3Image.alt
             },
             {
               id: "4",
-              name: "David Thompson",
-              role: "Operations Manager",
-              company: "GrowthPoint LLC",
+              name: "James Rodriguez",
+              role: "Senior Partner",
+              company: "Elite Holdings LLC",
               rating: 5,
               imageSrc: testimonial4Image.url,
               imageAlt: testimonial4Image.alt
@@ -327,11 +327,11 @@ export default function Home() {
 
       <div id="socialProof" data-section="socialProof">
         <SocialProofOne
-          title="Trusted Automotive Brands"
-          description="We work with the industry's most reputable manufacturers"
-          tag="Partners"
-          tagIcon={Handshake}
-          logos={[
+          title="Prestigious Brand Partners"
+          description: "Representing the world's most coveted luxury automotive manufacturers"
+          tag: "Premium Brands"
+          tagIcon: {Handshake}
+          logos: [
             hondaLogo.url,
             toyotaLogo.url,
             bmwLogo.url,
@@ -339,35 +339,35 @@ export default function Home() {
             audiLogo.url,
             fordLogo.url,
             nissanLogo.url
-          ]}
+          ]
         />
       </div>
 
       <div id="faq" data-section="faq">
         <FaqSplitText
-          sideTitle="Frequently Asked Questions"
-          sideDescription="Everything you need to know about buying from AutoElite"
+          sideTitle="Luxury Car Buying Questions"
+          sideDescription="Everything you need to know about acquiring your luxury vehicle through AutoElite Motors"
           textPosition="left"
           faqs={[
             {
               id: "1",
-              title: "What financing options do you offer?",
-              content: "We offer competitive financing with rates starting at 2.9% APR for qualified buyers. Terms range from 36 to 84 months with flexible down payment options."
+              title: "What exclusive financing options are available?",
+              content: "We offer premium financing solutions with rates starting at 1.9% APR for qualified buyers. Our luxury financing programs include terms up to 96 months with flexible down payment options tailored to your financial preferences."
             },
             {
               id: "2",
-              title: "Do you accept trade-ins?",
-              content: "Yes, we accept trade-ins and offer competitive market value. Our team will evaluate your vehicle and provide a fair quote that can be applied toward your new purchase."
+              title: "Do you provide luxury vehicle trade-in services?",
+              content: "Yes, we offer comprehensive trade-in evaluation services with market-leading valuations. Our expert team provides detailed assessments and competitive offers that can be applied directly toward your new luxury vehicle purchase."
             },
             {
               id: "3",
-              title: "What warranty do you provide?",
-              content: "All our vehicles come with a comprehensive inspection report. We also offer extended warranty options for additional peace of mind and protection."
+              title: "What warranty protection is included?",
+              content: "All luxury vehicles include comprehensive pre-delivery inspection documentation. We also offer extensive warranty programs and protection plans specifically designed for luxury vehicle ownership and peace of mind."
             },
             {
               id: "4",
-              title: "Can I schedule a test drive?",
-              content: "Absolutely! Contact us to schedule a test drive at your convenience. We encourage all customers to experience the vehicle before making a decision."
+              title: "How do I schedule a private viewing?",
+              content: "Contact our luxury vehicle specialists to arrange a private viewing at your convenience. We encourage personalized consultations and test drives to ensure your complete satisfaction with your vehicle selection."
             }
           ]}
         />
@@ -377,11 +377,11 @@ export default function Home() {
         <ContactSplit
           tag="Get Started"
           tagIcon={Phone}
-          title="Ready to Find Your Perfect Car?"
-          description="Contact us today to schedule a test drive or get more information about our inventory and financing options."
-          inputPlaceholder="Enter your email"
-          buttonText="Get Quote"
-          termsText="By submitting, you agree to receive updates about our inventory and special offers."
+          title="Begin Your Luxury Car Journey"
+          description="Connect with our luxury vehicle specialists to explore our exclusive inventory and discuss personalized financing solutions."
+          inputPlaceholder="Enter your email address"
+          buttonText="Request Consultation"
+          termsText="By submitting, you consent to receive exclusive updates about our luxury inventory and special client opportunities."
           imageSrc={contactImage.url}
           imageAlt={contactImage.alt}
           mediaPosition="right"
@@ -390,27 +390,27 @@ export default function Home() {
 
       <div id="footer" data-section="footer">
         <FooterLogoEmphasis
-          logoText="AutoElite"
+          logoText="AutoElite Motors"
           columns={[
             {
               items: [
-                { label: "Inventory", href: "product" },
-                { label: "Financing", href: "pricing" },
-                { label: "Trade-In", href: "#trade" }
+                { label: "Luxury Inventory", href: "product" },
+                { label: "Premium Financing", href: "pricing" },
+                { label: "Trade Appraisal", href: "#trade" }
               ]
             },
             {
               items: [
-                { label: "About Us", href: "about" },
-                { label: "Our Team", href: "#team" },
-                { label: "Reviews", href: "testimonial" }
+                { label: "About AutoElite", href: "about" },
+                { label: "Our Specialists", href: "#team" },
+                { label: "Client Reviews", href: "testimonial" }
               ]
             },
             {
               items: [
-                { label: "Contact", href: "contact" },
-                { label: "Location", href: "#location" },
-                { label: "Hours", href: "#hours" }
+                { label: "Contact Us", href: "contact" },
+                { label: "Showroom Location", href: "#location" },
+                { label: "Hours of Operation", href: "#hours" }
               ]
             }
           ]}
